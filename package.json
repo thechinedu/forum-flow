@@ -1,0 +1,24 @@
+{
+  "name": "forum-flow",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/thechinedu/forum-flow",
+  "author": "Chinedu Daniel <chinedudaniel7@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@nestjs/cli": "^9.4.2",
+    "turbo": "^1.9.3"
+  }
+}
