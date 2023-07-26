@@ -20,3 +20,5 @@ WORKDIR /app
 COPY --from=builder /app/package.json /app/yarn.lock ./
 COPY --from=builder /app/apps/api/package.json /app/apps/api/yarn.lock ./apps/api/
 COPY --from=builder /app/apps/api/dist ./dist
+
+CMD ["node", "./apps/api/dist/main.js"]
