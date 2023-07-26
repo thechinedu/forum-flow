@@ -1,0 +1,38 @@
+services:
+  pg:
+    image: postgres:15.3-alpine
+    container_name: forum-flow-api-pg
+    restart: always
+    healthcheck:
+      test: ['CMD', 'pg_isready']
+      interval: 1s
+      timeout: 2s
+      retries: 5
+    user: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      target: builder
+    depends_on:
+      pg:
+        condition: service_healthy
+    command: ['/bin/sh', '-c', 'yarn dev']
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      PORT: ${PORT}
+    ports:
+      - 2001:2001
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+volumes:
+  postgres_data:
