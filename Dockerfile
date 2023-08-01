@@ -19,6 +19,8 @@ FROM node:18.16.0-alpine
 WORKDIR /app
 COPY --from=builder /app/package.json /app/yarn.lock ./
 COPY --from=builder /app/apps/api/package.json /app/apps/api/yarn.lock ./apps/api/
-COPY --from=builder /app/apps/api/dist ./dist
+COPY --from=builder /app/apps/api/dist ./apps/api
 
-CMD ["node", "./apps/api/dist/main.js"]
+RUN yarn install --production && yarn cache clean
+
+CMD ["node", "./apps/api/main.js"]
