@@ -7,6 +7,7 @@ WORKDIR /app
 COPY ["package.json", "yarn.lock", "./"]
 
 COPY ["apps/api/package.json", "apps/api/yarn.lock", "./apps/api/"]
+COPY ["apps/web/package.json", "./apps/web/"]
 
 RUN yarn install && yarn cache clean
 
