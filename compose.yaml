@@ -29,10 +29,13 @@ services:
       DATABASE_URL: ${DATABASE_URL}
       PORT: ${PORT}
     ports:
+      - 2000:2000
       - 2001:2001
     volumes:
       - ./:/app
       - /app/node_modules
+      - /app/apps/api/node_modules
+      - /app/apps/web/node_modules
 
 volumes:
   postgres_data:
