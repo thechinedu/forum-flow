@@ -1,0 +1,23 @@
+.header {
+  padding: var(--spacer-1) var(--spacer-2);
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: var(--spacer-1);
+  justify-content: space-between;
+}
+
+.logoContainer {
+  align-items: center;
+  display: flex;
+}
+
+.logoContainer img {
+  margin-right: var(--spacer-1\/2);
+}
+
+.nav > * {
+  font-size: var(--small);
+}
