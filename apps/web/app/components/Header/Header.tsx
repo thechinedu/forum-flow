@@ -10,13 +10,15 @@ export const Header = () => {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logoContainer}>
-          <Image alt="app logo" src={logo} width={16} height={16} />
-          ForumFlow
+          <Image alt="app logo" src={logo} width={24} height={24} />
+          <span>ForumFlow</span>
         </Link>
 
         <input type="search" placeholder="Search Forum Flow" />
 
-        <Link href="#">Log in</Link>
+        <Link href="#" className={styles.cta}>
+          Log in
+        </Link>
       </nav>
     </header>
   );

@@ -18,14 +18,9 @@
 
   --black: #262626;
   --white: #ffffff;
-  --powder: #f9f8f4;
-  --yale-blue: #094d92;
-  --atomic-tangerine: #ff934f;
-  --vivid-burgundy: #a61c3c;
-  --dartmouth-green: #306b34;
-  --gray: #464f51;
-  --subtle-gray: #e9e7e7;
-  --beige: #f5f5dc;
+  --primary: blue;
+  --secondary: #ff4500;
+  --background: #dae0e6;
 
   /* Spacing */
 
@@ -67,7 +62,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: var(--powder);
+  background-color: var(--background);
 }
 
 a {

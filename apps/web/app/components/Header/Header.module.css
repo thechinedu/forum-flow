@@ -1,5 +1,8 @@
 .header {
+  background-color: var(--white);
   padding: var(--spacer-1) var(--spacer-2);
+  position: sticky;
+  top: 0;
 }
 
 .nav {
@@ -14,10 +17,41 @@
   display: flex;
 }
 
-.logoContainer img {
-  margin-right: var(--spacer-1\/2);
+.logoContainer span {
+  display: none;
+  font-weight: 700;
 }
 
 .nav > * {
   font-size: var(--small);
+}
+
+.nav input {
+  background-color: #f6f7f8;
+  border: 0;
+  border-radius: 24px;
+  padding: var(--spacer-1) var(--spacer-2);
+}
+
+.cta {
+  background-color: var(--secondary);
+  border-radius: 24px;
+  color: var(--white);
+  font-weight: 500;
+  padding: var(--spacer-1) var(--spacer-2);
+}
+
+@media (min-width: 551px) {
+  .logoContainer img {
+    margin-right: var(--spacer-1);
+  }
+
+  .logoContainer span {
+    display: unset;
+  }
+
+  .nav input {
+    flex-grow: 1;
+    max-width: 767px;
+  }
 }
