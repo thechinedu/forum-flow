@@ -1,0 +1,43 @@
+.main {
+  margin-block-start: var(--spacer-2);
+  margin-inline: auto;
+  max-width: 800px;
+  padding-inline: var(--spacer-2);
+}
+
+.postContainer {
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: var(--spacer-2);
+}
+
+.postDetails {
+  align-items: center;
+  display: flex;
+  font-size: var(--small);
+  justify-content: space-between;
+}
+
+.postDetailsUserCommunity {
+  align-items: center;
+  display: flex;
+  gap: var(--spacer-1);
+}
+
+.postDetailsUserCommunity img {
+  border-radius: 50%;
+}
+
+.joinCommunity button {
+  background-color: var(--primary);
+  border: 0;
+  border-radius: 15px;
+  color: var(--white);
+  padding-inline: var(--spacer-1);
+}
+
+.postActions {
+  font-size: var(--small);
+  margin-block-start: var(--spacer-2);
+}
