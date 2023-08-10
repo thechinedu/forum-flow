@@ -12,6 +12,10 @@
   padding: var(--spacer-2);
 }
 
+.postContainer:not(:first-of-type) {
+  margin-block-start: var(--spacer-2);
+}
+
 .postDetails {
   align-items: center;
   display: flex;
@@ -38,6 +42,44 @@
 }
 
 .postActions {
+  align-items: center;
+  display: flex;
+  gap: var(--spacer-1);
   font-size: var(--small);
   margin-block-start: var(--spacer-2);
+}
+
+.voteActions {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 25px;
+  display: flex;
+  gap: var(--spacer-1\/2);
+  padding: var(--spacer-1) var(--spacer-2);
+}
+
+.voteActions button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 16px;
+  padding: 0;
+  width: 16px;
+}
+
+.voteActions button:first-of-type:hover svg {
+  fill: var(--secondary);
+}
+
+.voteActions button:nth-of-type(2):hover svg {
+  fill: var(--primary);
+}
+
+.comments {
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 25px;
+  display: flex;
+  gap: var(--spacer-1\/2);
+  padding: var(--spacer-1) var(--spacer-2);
 }
